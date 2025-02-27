@@ -27,5 +27,5 @@ let replace = () => {
     localStorage.removeItem("totalCost");
     localStorage.removeItem("users");
     localStorage.removeItem("productDetails")
-    location.replace("../home/index.html");
+    location.replace("../index.html");
   };

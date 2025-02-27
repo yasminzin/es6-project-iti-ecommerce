@@ -11,7 +11,6 @@ function hideLoader() {
 setTimeout(hideLoader, 1000);
 
 const inputs = document.querySelectorAll("input");
-console.log(inputs);
 
 const emailReq = document.querySelector(".email-required");
 let emailStatus = false;
@@ -112,7 +111,6 @@ let register = (e) => {
     passStatus &&
     !users.find((user) => user.email === email)
   ) {
-    console.log("successed user");
     let userId = generateRandomId();
     while (users.find((user) => user.userId == userId)) {
       userId = generateRandomId();
@@ -120,7 +118,7 @@ let register = (e) => {
     users.push({ fname, lname, email, pass, userId });
     localStorage.setItem("users", JSON.stringify(users));
     notes.innerHTML = "User Registered Successfuly";
-    location.replace("../home/index.html");
+    location.replace("../index.html");
   } else if (users.find((user) => user.email === email)) {
     notes.innerHTML = "Email Already Registered*";
   } else {

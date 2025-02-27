@@ -223,7 +223,7 @@ nav {
   border: 2px #d9534f solid !important;
 }
 
-/* Products */
+/* Card Items */
 .card-container {
   margin-bottom: 50px;
 }
@@ -233,7 +233,6 @@ nav {
 }
 
 .card-item .card-link {
-  /* margin: 0 10px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -255,7 +254,6 @@ nav {
 
 .card-link .card-image {
   border-radius: 10px;
-  /* height: 110px; */
 }
 
 .card-link .badge {

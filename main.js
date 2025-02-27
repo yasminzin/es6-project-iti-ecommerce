@@ -83,11 +83,11 @@ let showProducts = (element) => {
                             <button class="card-button mx-2 details">
                               <i class="fa-solid fa-arrow-right" onclick="showDetails(${element["ProductId"]})"></i>
                             </button>
-                            <button class="card-button mx-2" onclick="addToCart(${element["ProductId"]})">
+                            <button class="card-button mx-2" onclick="mustLog(event)">
                               <i class="fa-solid fa-plus"></i>
                             </button>
                             <span class="cart-qnt mx-2">0</span>
-                            <button class="card-button mx-2" onclick="removeFromCart(${element["ProductId"]})">
+                            <button class="card-button mx-2" onclick="mustLog(event)">
                               <i class="fa-solid fa-minus"></i>
                             </button>
                           </section>
@@ -205,7 +205,6 @@ let mustLog = (event) => {
 };
 window.mustLog = mustLog;
 
-// SEARCH
 const searchInput = document.querySelector("#search");
 
 let search = (e) => {
@@ -245,7 +244,7 @@ let search = (e) => {
           (element["ProductName"].includes(searchInput.value) ||
             element["Brand"].includes(searchInput.value))
       );
-      redundant(mobileButton, filteredArray, "Tablet"); // Fixed category label
+      redundant(mobileButton, filteredArray, "Tablet");
     } else {
       const response = await getProducts();
       let filteredArray = response["data"].filter(
@@ -268,6 +267,6 @@ let showDetails = (productId) => {
   let product = products.filter((element) => element["ProductId"] == productId);
 
   localStorage.setItem("productDetails", JSON.stringify(...product));
-  location.assign("../product/index.html");
+  window.open("./productHome/index.html", "_blank");
 };
 window.showDetails = showDetails;

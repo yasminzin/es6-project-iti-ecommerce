@@ -164,15 +164,15 @@ nav {
 }
 
 .back-image-one {
-  background-image: url(../home/images/slider1.png);
+  background-image: url(../images/slider1.png);
 }
 
 .back-image-two {
-  background-image: url(../home/images/slider7.jpg);
+  background-image: url(../images/slider7.jpg);
 }
 
 .back-image-three {
-  background-image: url(../home/images/slider13.webp);
+  background-image: url(../images/slider13.webp);
 }
 
 .back-content {
@@ -233,7 +233,6 @@ nav {
 }
 
 .card-item .card-link {
-  /* margin: 0 10px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -255,7 +254,6 @@ nav {
 
 .card-link .card-image {
   border-radius: 10px;
-  /* height: 110px; */
 }
 
 .card-link .badge {

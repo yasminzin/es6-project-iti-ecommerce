@@ -216,7 +216,6 @@ sliderElement.addEventListener("mouseleave", () => {
   slider = setInterval(showSlide, 5000);
 });
 
-// SEARCH
 const searchInput = document.querySelector("#search");
 
 let search = (e) => {
@@ -256,7 +255,7 @@ let search = (e) => {
           (element["ProductName"].includes(searchInput.value) ||
             element["Brand"].includes(searchInput.value))
       );
-      redundant(mobileButton, filteredArray, "Tablet"); // Fixed category label
+      redundant(mobileButton, filteredArray, "Tablet");
     } else {
       const response = await getProducts();
       let filteredArray = response["data"].filter(
@@ -284,7 +283,7 @@ let replace = () => {
   localStorage.removeItem("totalCost");
   localStorage.removeItem("users");
   localStorage.removeItem("productDetails");
-  location.replace("../home/index.html");
+  location.replace("../index.html");
 };
 window.replace = replace;
 
@@ -393,6 +392,6 @@ let showDetails = (productId) => {
   let product = products.filter((element) => element["ProductId"] == productId);
 
   localStorage.setItem("productDetails", JSON.stringify(...product));
-  location.assign("../product/index.html");
+  window.open("../productUser/index.html", "_blank");
 };
 window.showDetails = showDetails;

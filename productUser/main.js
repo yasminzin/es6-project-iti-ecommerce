@@ -1,3 +1,17 @@
+import { getProducts } from "../products.js";
+
+let products = [];
+
+let allFunction = () => {
+  async function getAllHome() {
+    const response = await getProducts();
+    products = response["data"];
+  }
+  getAllHome();
+};
+window.allFunction = allFunction;
+allFunction();
+
 const welcomeSpan = document.querySelector(".welcome-span");
 
 let fname = localStorage.getItem("current fname");
@@ -51,6 +65,15 @@ const {
 } = productDetails;
 
 window.onload = () => {
+  let qnt;
+  let ordered = cart.find(
+    (product) => productDetails["ProductId"] == product["ProductId"]
+  );
+  if (ordered) {
+    qnt = ordered["Quantity"];
+  } else {
+    qnt = 0;
+  }
   let section = document.createElement("section");
   section.setAttribute("class", "col-lg-4 col-md-3 col-sm-4 coll");
   let sectionHTML = `<section class="card-item">
@@ -68,7 +91,7 @@ window.onload = () => {
 
   if (
     productDetails["Category"] == "Mobile" ||
-    productDetails["Category"] == "Laptop & PC"||
+    productDetails["Category"] == "Laptop & PC" ||
     productDetails["Category"] == "Tablet"
   ) {
     sectionHTML += `<p class="card-title text-center">
@@ -99,14 +122,11 @@ window.onload = () => {
   }
   sectionHTML += `
   <section class="cart-buttons d-flex justify-content-center">
-                          <button class="card-button mx-2 details">
-                            <i class="fa-solid fa-arrow-right"></i>
-                          </button>
-                          <button class="card-button mx-2" onclick="addToCart(event, '${element["ProductId"]}')">
+                          <button class="card-button mx-2" onclick="addToCart(event, '${productDetails["ProductId"]}')">
                             <i class="fa-solid fa-plus"></i>
                           </button>
-                          <span class="cart-qnt mx-2">${element["Quantity"]} </span>
-                          <button class="card-button mx-2" onclick="removeFromCart(event, '${element["ProductId"]}')">
+                          <span class="cart-qnt mx-2">${qnt} </span>
+                          <button class="card-button mx-2" onclick="removeFromCart(event, '${productDetails["ProductId"]}')">
                             <i class="fa-solid fa-minus"></i>
                           </button>
                         </section>
@@ -157,8 +177,6 @@ let addToCart = (e, productId) => {
   totalCost = adjustTotalCost(totalCost);
 
   localStorage.setItem("totalCost", totalCost);
-
-  totalCostElement.innerHTML = `${totalCost}`;
 };
 window.addToCart = addToCart;
 
@@ -183,9 +201,6 @@ let removeFromCart = (e, productId) => {
     }
     productInCart.Quantity--;
     if (productInCart["Quantity"] == 0) {
-      let cardItem = e.target.closest(".coll");
-      console.log(cardItem);
-      cardItem.remove();
       let index = cart.findIndex(
         (element) => element["ProductId"] == productInCart["ProductId"]
       );
@@ -199,7 +214,6 @@ let removeFromCart = (e, productId) => {
   localStorage.setItem("cart", JSON.stringify(cart));
 
   if (cart.length === 0) {
-    // location.reload();
     let proceedForm = document.querySelector(".proceed-form");
     proceedForm.remove();
     cardContainer.innerHTML = `
@@ -236,8 +250,6 @@ let removeFromCart = (e, productId) => {
   totalCost = adjustTotalCost(totalCost);
 
   localStorage.setItem("totalCost", totalCost);
-
-  totalCostElement.innerHTML = `${totalCost}`;
 };
 window.removeFromCart = removeFromCart;
 

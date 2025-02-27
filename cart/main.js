@@ -123,9 +123,6 @@ window.onload = () => {
 
     let total = document.createElement("section");
     total.setAttribute("class", "container coll proceed-form");
-    // console.log(totalCost)
-    // totalCost = adjustTotalCost(totalCost);
-    // console.log(totalCost)
     total.innerHTML = `<p class="fw-bold fs-4 text-center">Total Cost: <span class="text-danger total-cost">${totalCost}</span></p>
     <form class="shadow p-4 mt-5 rounded-3" method="post">
   <div class="mb-3">
@@ -153,7 +150,7 @@ window.onload = () => {
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
   </div>
-  <button type="submit" class="btn btn-danger" onclick="proceed()">Proceed</button>
+  <button type="submit" class="btn btn-danger" onclick="proceed(event)">Proceed</button>
 </form>`;
     aboveCardContainer.append(total);
   } else {
@@ -205,8 +202,6 @@ let addToCart = (e, productId) => {
     return;
   }
 
-  // totalCost = adjustTotalCost(totalCost);
-
   localStorage.setItem("totalCost", totalCost);
 
   totalCostElement.innerHTML = `${totalCost}`;
@@ -250,7 +245,6 @@ let removeFromCart = (e, productId) => {
   localStorage.setItem("cart", JSON.stringify(cart));
 
   if (cart.length === 0) {
-    // location.reload();
     let proceedForm = document.querySelector(".proceed-form");
     proceedForm.remove();
     cardContainer.innerHTML = `
@@ -275,8 +269,6 @@ let removeFromCart = (e, productId) => {
     return (acc = acc + priceWithoutDot * value["Quantity"]);
   }, 0);
 
-  // totalCost = adjustTotalCost(totalCost);
-
   localStorage.setItem("totalCost", totalCost);
 
   if (totalCostElement) {
@@ -285,29 +277,10 @@ let removeFromCart = (e, productId) => {
 };
 window.removeFromCart = removeFromCart;
 
-// let adjustTotalCost = (totalCost) => {
-//   if (String(totalCost).length > 3) {
-//     let rightNumbers = totalCost % 1000;
-//     let leftNumbers =
-//       totalCost / 1000 - (totalCost / 1000 - Math.floor(totalCost / 1000));
-//     totalCost = `${leftNumbers}.${rightNumbers}`;
-//     return totalCost;
-//   } else {
-//     return totalCost;
-//   }
-// };
-// window.adjustTotalCost = adjustTotalCost;
+let proceed = (e) => {
+  e.preventDefault();
 
-let proceed = () => {
-  // const fullName = document.querySelector('#exampleInputFullName1').value
-  // const fullNumber = document.querySelector('#exampleInputFullNumber1').value
-  // const fullAddress = document.querySelector('#exampleInputAddress1').value
-  // const cardNumber = document.querySelector('#exampleInputCardNumber1').value
-  // const cvvcvc = document.querySelector('#exampleInputCVV/CVC1').value
-  // const Email = document.querySelector('#exampleInputEmail1').value
-  // if (fullName && )
   location.assign("../order/index.html");
-  
 };
 window.proceed = proceed;
 
@@ -320,6 +293,6 @@ let replace = () => {
   localStorage.removeItem("totalCost");
   localStorage.removeItem("users");
   localStorage.removeItem("productDetails");
-  location.replace("../home/index.html");
+  location.replace("../index.html");
 };
 window.replace = replace;
