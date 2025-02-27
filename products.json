@@ -1,0 +1,136 @@
+{
+  "data": [
+    {
+      "Brand": "Anker",
+      "Color": "Black",
+      "Price": "2.599",
+      "Category": "Accessories",
+      "PlayTime": "36 hours",
+      "ProductId": "0001",
+      "ChargeTime": "10 min = 3 hours",
+      "Connection": "Bluetooth",
+      "ImageSource": "https://r2media.horizondm.com/catalog/product/cache/257553d71735e96dcdf7e87f4b22e6bc/a/n/anker-soundcore-v30i-earphone-tws-a3873h11---black-.jpg",
+      "ProductName": "Soundcore Anker V30i"
+    },
+    {
+      "Brand": "Samsung",
+      "Color": "Purple",
+      "Price": "5.099",
+      "Category": "Accessories",
+      "PlayTime": "20 hours",
+      "ProductId": "0002",
+      "ChargeTime": "2 hours",
+      "Connection": "Bluetooth",
+      "ImageSource": "https://r2media.horizondm.com/catalog/product/cache/257553d71735e96dcdf7e87f4b22e6bc/s/a/samsung-buds-_2_-lavander-1.jpg",
+      "ProductName": "Samsung Buds 2"
+    },
+    {
+      "CPU": "M3 Air",
+      "RAM": "8GB",
+      "Brand": "Apple",
+      "Color": "Starlight",
+      "Price": "56.700",
+      "Storage": "256GB",
+      "Category": "Laptop & PC",
+      "ProductId": "0003",
+      "ImageSource": "https://r2media.horizondm.com/catalog/product/cache/257553d71735e96dcdf7e87f4b22e6bc/a/p/apple-macbook-air-13.6_-m3starlight.jpg",
+      "ProductName": "Apple Mac Book Air M3"
+    },
+    {
+      "CPU": "i7-1255U",
+      "RAM": "16GB",
+      "Brand": "Dell",
+      "Color": "Black",
+      "Price": "28.999",
+      "Storage": "512GB",
+      "Category": "Laptop & PC",
+      "ProductId": "0004",
+      "ImageSource": "https://r2media.horizondm.com/catalog/product/cache/257553d71735e96dcdf7e87f4b22e6bc/d/e/dell-laptop-i7-1255u---8g---512g-ssd---mx550---15.6-inch-fhd--vostro-3520-e003-black-1_1.jpg",
+      "ProductName": "Dell Vostro 3520-E002"
+    },
+    {
+      "CPU": "i7-1255U",
+      "RAM": "8GB",
+      "Brand": "HP",
+      "Color": "Silver",
+      "Price": "45.799",
+      "Storage": "512GB",
+      "Category": "Laptop & PC",
+      "ProductId": "0005",
+      "ImageSource": "https://r2media.horizondm.com/catalog/product/cache/257553d71735e96dcdf7e87f4b22e6bc/h/p/hp-probook-450-g9--00000.jpg",
+      "ProductName": "HP Pro Book 450 G9"
+    },
+    {
+      "CPU": "Apple M2",
+      "RAM": "8GB",
+      "Brand": "Apple",
+      "Color": "Grey",
+      "Price": "41.999",
+      "Storage": "256GB",
+      "Category": "Tablet",
+      "ProductId": "0006",
+      "ImageSource": "https://r2media.horizondm.com/catalog/product/cache/257553d71735e96dcdf7e87f4b22e6bc/n/e/new_project_-_2024-11-11t104725.980_3.jpg",
+      "ProductName": "Ipad Air M2"
+    },
+    {
+      "CPU": "Exynos 1380",
+      "RAM": "8GB",
+      "Brand": "Samsung",
+      "Color": "Grey",
+      "Price": "33.999",
+      "Storage": "128GB",
+      "Category": "Tablet",
+      "ProductId": "0007",
+      "ImageSource": "https://r2media.horizondm.com/catalog/product/cache/257553d71735e96dcdf7e87f4b22e6bc/_/-/_-_2024-12-19t141336.188.jpg",
+      "ProductName": "Samsung Galaxy S9+ FE"
+    },
+    {
+      "CPU": "Exynos 1280",
+      "RAM": "4GB",
+      "Brand": "Samsung",
+      "Color": "Black",
+      "Price": "22.599",
+      "Storage": "128GB",
+      "Category": "Tablet",
+      "ProductId": "0008",
+      "ImageSource": "https://r2media.horizondm.com/catalog/product/cache/257553d71735e96dcdf7e87f4b22e6bc/_/-/_-_2024-12-28t143148.109.jpg",
+      "ProductName": "Samsung Galaxy Tab S6 Lite"
+    },
+    {
+      "CPU": "Apple A18 3nano",
+      "RAM": "8GB",
+      "Brand": "Apple",
+      "Color": "Purple",
+      "Price": "57.999",
+      "Storage": "128GB",
+      "Category": "Mobile",
+      "ProductId": "0009",
+      "ImageSource": "https://r2media.horizondm.com/catalog/product/cache/257553d71735e96dcdf7e87f4b22e6bc/_/-/_-_2025-02-13t115741.375.jpg",
+      "ProductName": "Iphone 16"
+    },
+    {
+      "CPU": "Exynos 1480",
+      "RAM": "8GB",
+      "Brand": "Samsung",
+      "Color": "Blue",
+      "Price": "22.990",
+      "Storage": "128GB",
+      "Category": "Mobile",
+      "ProductId": "0010",
+      "ImageSource": "https://r2media.horizondm.com/catalog/product/cache/257553d71735e96dcdf7e87f4b22e6bc/s/a/samsung_galaxy_a55_8gb_ram_256gb_-_awesome_navy-1_2.jpg",
+      "ProductName": "Samsung Galaxy A55"
+    },
+    {
+      "CPU": "Exynos 1380",
+      "RAM": "8GB",
+      "Brand": "Samsung",
+      "Color": "Yellow",
+      "Price": "17.777",
+      "Storage": "265GB",
+      "Category": "Mobile",
+      "ProductId": "0011",
+      "ImageSource": "https://r2media.horizondm.com/catalog/product/cache/257553d71735e96dcdf7e87f4b22e6bc/s/a/samsung_galaxy_a35_8gb_ram_128gb_-_awesome_lemon-1_2.jpg",
+      "ProductName": "Samsung Galaxy A35"
+    }
+  ]
+}
