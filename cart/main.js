@@ -1,4 +1,4 @@
-import { getProducts } from "../src/products";
+import { getProducts } from "../src/products.js";
 
 let products;
 
