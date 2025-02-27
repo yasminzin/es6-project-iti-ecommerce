@@ -237,7 +237,7 @@ let search = (e) => {
           (element["ProductName"].includes(searchInput.value) ||
             element["Brand"].includes(searchInput.value))
       );
-      redundant(mobileButton, filteredArray, "Laptop & PC");
+      redundant(laptopButton, filteredArray, "Laptop & PC");
     } else if (categoriesSelect.value == "Accessories") {
       const response = await getProducts();
       let filteredArray = response["data"].filter(
@@ -246,7 +246,7 @@ let search = (e) => {
           (element["ProductName"].includes(searchInput.value) ||
             element["Brand"].includes(searchInput.value))
       );
-      redundant(mobileButton, filteredArray, "Accessories");
+      redundant(accessoriesButton, filteredArray, "Accessories");
     } else if (categoriesSelect.value == "Tablet") {
       const response = await getProducts();
       let filteredArray = response["data"].filter(
@@ -255,7 +255,7 @@ let search = (e) => {
           (element["ProductName"].includes(searchInput.value) ||
             element["Brand"].includes(searchInput.value))
       );
-      redundant(mobileButton, filteredArray, "Tablet");
+      redundant(tabletButton, filteredArray, "Tablet");
     } else {
       const response = await getProducts();
       let filteredArray = response["data"].filter(
