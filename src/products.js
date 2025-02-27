@@ -9,7 +9,7 @@ var requestOptions = {
 
 export async function getProducts() {
   try {
-    const data = await fetch("/products.json", requestOptions);
+    const data = await fetch("./products.json", requestOptions);
     const response = await data.json();
     return response;
   } catch (error) {
