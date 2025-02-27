@@ -291,7 +291,6 @@ let replace = () => {
   localStorage.removeItem("current lname");
   localStorage.removeItem("cart");
   localStorage.removeItem("totalCost");
-  localStorage.removeItem("users");
   localStorage.removeItem("productDetails");
   location.replace("../index.html");
 };
