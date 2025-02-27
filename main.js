@@ -1,4 +1,4 @@
-import { getProducts } from "./products";
+import { getProducts } from "./products.js";
 
 let products = [];
 
