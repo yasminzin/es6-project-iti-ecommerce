@@ -9,7 +9,7 @@ var requestOptions = {
 
 export async function getProducts() {
   try {
-    const data = await fetch("/es6-project-iti-ecommerce/src/products.json", requestOptions);
+    const data = await fetch("https://yasminzin.github.io/es6-project-iti-ecommerce/src/products.json", requestOptions);
     const response = await data.json();
     return response;
   } catch (error) {
